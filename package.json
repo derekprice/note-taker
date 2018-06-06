@@ -1,0 +1,19 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "This is an app for taking notes.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekprice/note-taker.git"
+  },
+  "author": "Derek Price <derekprice02@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekprice/note-taker/issues"
+  },
+  "homepage": "https://github.com/derekprice/note-taker#readme"
+}
