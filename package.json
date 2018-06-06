@@ -4,7 +4,8 @@
   "description": "This is an app for taking notes.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/derekprice/note-taker/issues"
   },
-  "homepage": "https://github.com/derekprice/note-taker#readme"
+  "homepage": "https://github.com/derekprice/note-taker#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
 }
