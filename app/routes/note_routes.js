@@ -5,7 +5,10 @@ module.exports = (app, db) => {
 
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;
-    const details = { '_id': new ObjectID(id)};
+    const details = {
+       '_id': new ObjectID(id)
+    };
+    
     collection.findOne(details, (err, item) => {
       if (err) {
         res.send({ 'error': 'An error has occurred.' });
@@ -32,8 +35,15 @@ module.exports = (app, db) => {
 
   app.put('/notes/:id', (req, res) => {
     const id = req.params.id;
-    const details = { '_id': new ObjectID(id) };
-    const note = { text: req.body.body, title: req.body.title };
+    const details = {
+      '_id': new ObjectID(id)
+    };
+
+    const note = {
+      title: req.body.title,
+      text: req.body.body
+    };
+
     collection.update(details, note, (err, result) => {
       if (err) {
         res.send({
@@ -47,7 +57,10 @@ module.exports = (app, db) => {
 
   app.delete('/notes/:id', (req, res) => {
     const id = req.params.id;
-    const details = { '_id': new ObjectID(id)};
+    const details = {
+      '_id': new ObjectID(id)
+    };
+
     collection.remove(details, (err, item) => {
       if (err) {
         res.send({ 'error': 'An error has occurred.' });
